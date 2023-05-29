@@ -26,7 +26,7 @@ characterSchema.statics.list = async function(){
 };
 
 characterSchema.statics.get= async function(id){
-    return await this.findById(id)
+    return await this.findById(parseInt(id))
         .populate("homeworld",["_id","name"])
         .populate("films",["_id","title"])
 }
