@@ -18,11 +18,7 @@ app.use('/planets', createProxyMiddleware({
   changeOrigin: true,
 }))
 
-/* app.use('/',createProxyMiddleware({
-  target: 'http://database:8004',
-  changeOrigin: true,
-}))
- */
+
 app.listen(8000, () => {
   console.log("Server listening on port 8000");
 });
