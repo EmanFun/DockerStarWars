@@ -1,4 +1,5 @@
 module.exports = {
     get: require('./getPlanets'),
-    //delete post put
+    getbById: require('./getById'),
+    post: require('./postPlanets')
 }
