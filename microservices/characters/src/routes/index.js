@@ -3,11 +3,11 @@ const controller = require('../controllers');
 
 
 
-const routes = Router();
+const router = Router();
 
 
-routes.use("/characters",controller.get)
+router.use("/Characters",controller.get)
+router.use("/Characters/",controller.getbyId)
+router.use("/Characters",controller.post)
 
-
-
-module.exports= routes;
+module.exports= router;
