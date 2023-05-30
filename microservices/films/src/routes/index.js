@@ -2,9 +2,11 @@ const {Router} = require('express');
 const controllers = require('../controllers')
 
 
-const routes = Router();
+const router= Router();
 
-routes.use("/films", controllers.get)
+router.use("/Films", controllers.get)
+router.use("/Films/", controllers.getById)
+router.use("/Films", controllers.post)
 
 
-module.exports = routes;
+module.exports = router;
