@@ -1,4 +1,6 @@
 module.exports= {
     get: require('./getCharacters'),
-    //post put delete
+    getbyId: require('./getById'),
+    post: require('./postCharacters'),
+
 }
