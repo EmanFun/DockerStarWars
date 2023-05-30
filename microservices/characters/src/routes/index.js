@@ -6,8 +6,8 @@ const controller = require('../controllers');
 const router = Router();
 
 
-router.use("/Characters",controller.get)
-router.use("/Characters/",controller.getbyId)
-router.use("/Characters",controller.post)
+router.use("/characters",controller.get)
+router.use("/characters/",controller.getbyId)
+router.use("/characters",controller.post)
 
 module.exports= router;

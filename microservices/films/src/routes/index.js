@@ -4,9 +4,9 @@ const controllers = require('../controllers')
 
 const router= Router();
 
-router.use("/Films", controllers.get)
-router.use("/Films/", controllers.getById)
-router.use("/Films", controllers.post)
+router.use("/films", controllers.get)
+router.use("/films/", controllers.getById)
+router.use("/films", controllers.post)
 
 
 module.exports = router;
