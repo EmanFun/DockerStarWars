@@ -7,7 +7,7 @@ const router = Router();
 
 
 router.use("/characters",controller.get)
-router.use("/characters/",controller.getbyId)
-router.use("/characters",controller.post)
+router.use("/characters/:id",controller.getbyId)
+router.use("/newCharacter",controller.post)
 
 module.exports= router;
