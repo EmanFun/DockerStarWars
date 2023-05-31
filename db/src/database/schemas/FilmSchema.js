@@ -3,7 +3,7 @@ const {Schema} = require('mongoose');
 
 const filmSchema = new Schema({
     
-    _id:Number,
+    _id:String,
     title:String,
     opening_crawl: String,
     director: String,
@@ -20,7 +20,8 @@ filmSchema.statics.list = async function(){
 }
 
 filmSchema.statics.get = async function(id){
-    return await this.findById(id).populate('characters', ["_id","name"])
+    return await this.findById(id)
+    .populate('characters', ["_id","name"])
     .populate('planets', ['_id','name'])
 }
 

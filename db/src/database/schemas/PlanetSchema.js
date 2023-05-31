@@ -2,7 +2,7 @@ const {Schema} = require('mongoose');
 
 
 const planetSchema = new Schema({
-    _id:Number,
+    _id:String,
     name:String,
     rotation_period: Number,
     orbital_period: Number,
@@ -20,8 +20,8 @@ planetSchema.statics.list = async function(){
         .populate('films',['_id', 'title'])
 }
 
-planetSchema.statics.get= async function(){
-    return await this.find()
+planetSchema.statics.get= async function(id){
+    return await this.findById(id)
         .populate('res_idents',['_id', 'name'])
         .populate('films', ['_id', 'title'])
 }

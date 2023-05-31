@@ -3,7 +3,7 @@ const {Schema}= require('mongoose');
 
 const characterSchema = new Schema({
     
-_id: Number,
+_id: String,
 name: String,
 height: Number,
 mass: Number, 
@@ -26,7 +26,7 @@ characterSchema.statics.list = async function(){
 };
 
 characterSchema.statics.get= async function(id){
-    return await this.findById(parseInt(id))
+    return await this.findById(id)
         .populate("homeworld",["_id","name"])
         .populate("films",["_id","title"])
 }
