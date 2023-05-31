@@ -1,7 +1,12 @@
 const axios = require('axios');
 
-module.exports = async (req, res)=>{
+module.exports = async (req, res, next)=>{
     const {id} = req.params;
-    const data = await axios.get(`http://database:8004/Character/${id}`);
-    res.send(data)
+    if(id){
+        const response = await axios.get(`http://database:8004/Character/${id}`);
+        res.send(response.data)
+
+    }else{
+        next()
+    }
 }
